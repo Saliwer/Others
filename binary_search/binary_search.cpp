@@ -1,9 +1,8 @@
 #include <iostream>
-#include <chrono> //дл€ класса Timer
+#include <chrono>
 
 class Timer {
 private:
-	//ѕсевдонимы типов дл€ удобств
 	using clock_t = std::chrono::high_resolution_clock;
 	using second_t = std::chrono::duration<double, std::ratio<1>>;
 	std::chrono::time_point<clock_t> m_beg;
@@ -25,6 +24,7 @@ public:
 // array - input array
 // target - searched value
 // The search is carrying out in the range between [min,max]
+// Return value - index of an item otherwise -1
 int binarySearch(int *array, int target, int min, int max);	//Iteration binary search
 int binarySearchRec(int *array, int target, int min, int max); //Recursive binary search
 int NotBinarySearch(int *array, int target, int countElements); 
